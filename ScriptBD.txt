@@ -1,0 +1,20 @@
+CREATE TABLE [dbo].[professor]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [nome] NCHAR(20) NULL, 
+    [email] NCHAR(20) NULL, 
+    [senha] NCHAR(20) NULL
+)
+
+CREATE TABLE [dbo].[turma] (
+    [Id]           INT        IDENTITY (1, 1) NOT NULL,
+    [nomeTurma]    NCHAR (100) NULL,
+    [id_Professor] INT        NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+CREATE TABLE [dbo].[atividade]
+(
+	[Id] INT NOT NULL PRIMARY KEY, 
+    [nomeAtividade] NCHAR(20) NULL
+)
